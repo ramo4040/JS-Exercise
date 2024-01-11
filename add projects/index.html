@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+                integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+        <main>
+                <nav>
+                        <div class="menu">
+                                <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Projects</a></li>
+                                        <li><a href="#">Inbox</a></li>
+                                        <li><a href="#">Teams</a></li>
+                                </ul>
+                        </div>
+                        <div class="profile">
+                                <a href="#">Upgrade</a>
+                                <img src="profile1.png">
+                        </div>
+                </nav>
+
+                <aside>
+                        <div class="projects-list">
+                                <b class="title">PROJECTS</b>
+                                <ul class="project-ul">
+                                        
+                                </ul>
+                        </div>
+                        <div class="teams">
+                                <b class="title">TEAMS</b>
+                                <div>
+                                        <h3>Need to form a team ?</h3>
+                                        <p>Try our 30 days trial <br> and see what you <br> can achieve together.</p>
+                                        <a href="#">Try it free</a>
+                                </div>
+                        </div>
+                </aside>
+
+                <section>
+                        <h2>Projects</h2>
+                        <div class="project-cards">
+                                <div class="add-projects " onclick="toggleAdd()">
+                                        <div class="add">
+                                                <i class="bi bi-plus-lg"></i>
+                                        </div>
+                                        <h4>Add a projects</h4>
+                                </div>
+
+                               
+                        </div>
+                        <div class="info info-diplay">
+                                <div class="content">
+                                        <div>
+                                                <label for="name">
+                                                        <h3>Name of projects</h3>
+                                                </label>
+                                                <input type="text" id="name" required>
+                                        </div>
+                                        <a href="#" onclick="getInfo()">Submit</a>
+                                </div>
+                        </div>
+                </section>
+        </main>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

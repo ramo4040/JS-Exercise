@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+                integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+        <main>
+                <h1>PASSWORD GENERATOR</h1>
+                <div class="container">
+                        <div class="screen">
+                                <input type="text" placeholder="Password" readonly data-passwordDisplay>
+                                <i class="bi bi-copy" data-copy></i>
+                        </div>
+                        <section>
+                                <header>
+                                        <div>
+                                                <p>Password Length</p>
+                                                <p data-lengthnumber>11</p>
+                                        </div>
+                                        <input type="range" min="1" max="20" step="1" data-lengthSlider>
+                                </header>
+
+                                <div class="check-box">
+                                        <label for="Uppercase"><input type="checkbox" id="Uppercase"> Includes Uppercase letters</label>
+                                        <label for="Lowercase"><input type="checkbox" id="Lowercase"> Includes Lowercase letters</label>
+                                        <label for="Numbers"><input type="checkbox" id="Numbers"> Includes Numbers</label>
+                                        <label for="Symbols"><input type="checkbox" id="Symbols"> Includes Symbols</label>
+                                </div>
+
+                                <button class="generateButton">Generate Password</button>
+                        </section>
+
+                        <div class="msgSuccess">
+                                <div class="circle">
+                                        <i class="bi bi-check-lg"></i>
+                                </div>
+                                <h4>Password copied with success</h4>
+                        </div>
+                        <div class="msgError">
+                                <div class="circle">
+                                        <i class="bi bi-x-lg"></i>
+                                </div>
+                                <h4>Please select option</h4>
+                        </div>
+
+                </div>
+        </main>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

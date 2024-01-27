@@ -1,0 +1,209 @@
+:root {
+    --main-color: #54b8ff;
+    --blur-color: #ffffff0f;
+    --border-color: #a7a7a75c;
+    --text-color: #c8c8c8;
+}
+
+body {
+    background: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: system-ui;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background: #00000078;
+    color: var(--text-color);
+    display: grid;
+    justify-items: center;
+    place-content: center;
+    gap: 1rem;
+
+    >h1 {
+        padding: 1rem;
+        background:
+            linear-gradient(currentColor 0 0) 0 100%,
+            linear-gradient(currentColor 0 0) 0 100%,
+            linear-gradient(currentColor 0 0) 100% 0,
+            linear-gradient(currentColor 0 0) 100% 0;
+        background-size: 20px 3px, 3px 20px;
+        background-repeat: no-repeat;
+        transition: 0.5s;
+
+        &:hover {
+            background-position: 100% 100%, 0 0, 0 0, 100% 100%;
+        }
+    }
+}
+
+.container {
+    width: 28rem;
+    height: 30rem;
+    display: grid;
+    grid-template-rows: 4rem 1fr;
+    gap: 1rem;
+
+    >* {
+        background: var(--blur-color);
+        backdrop-filter: blur(33px);
+        border-radius: 1rem;
+        border-bottom: 4px solid var(--border-color);
+    }
+}
+
+.screen {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+
+    i {
+        color: var(--main-color);
+        cursor: pointer;
+    }
+
+    input {
+        height: 100%;
+        background: none;
+        border: 0;
+        outline: 0;
+        font-weight: 600;
+        font-size: 1.3rem;
+        line-height: 30px;
+        letter-spacing: 1px;
+        padding-right: 3.25rem;
+        color: var(--main-color);
+
+        &::placeholder {
+            color: var(--main-color);
+        }
+    }
+}
+
+section {
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 1.6rem;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+
+            p[data-lengthnumber] {
+                color: var(--main-color);
+            }
+        }
+
+        input {
+            cursor: pointer;
+
+            &::-webkit-slider-runnable-track {
+                background: #053a5f;
+                border-radius: 100vmax;
+                border: 1px solid rgba(255, 255, 255, 0.199);
+            }
+
+            &:focus::-webkit-slider-runnable-track {
+                border: 1px solid #053a5f;
+                outline: 3px solid #053a5f;
+                outline-offset: 0.125rem;
+            }
+        }
+    }
+
+    .check-box {
+        display: grid;
+        gap: .4rem;
+        font-size: 1.25rem;
+        letter-spacing: 0.75px;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            input {
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--main-color);
+                cursor: pointer;
+                border-radius: 0.35rem;
+
+                &:checked {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .generateButton {
+        width: 100%;
+        padding: 1rem 0;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 0.7rem;
+        border-bottom: 5px solid var(--main-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: black;
+        font-weight: 700;
+        font-size: 1.25rem;
+        cursor: pointer;
+        transition: .2s;
+
+        &:active {
+            border-bottom: 0px solid var(--main-color);
+            scale: 0.95;
+        }
+    }
+
+}
+
+.msgSuccess , .msgError{
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    width: 22rem;
+    height: 5rem;
+    padding: 1rem;
+    border: 0;
+    border-radius: 100vmax 0 0 100vmax;
+
+    display: none;
+    align-items: center;
+    gap: 1rem;
+
+    .circle{
+        background: #43a443;
+        box-shadow: 0 0 1rem 0 #43a443;
+        border-radius: 50%;
+        width: 3.5rem;
+        aspect-ratio: 1;
+        display: flex;
+        i{
+            font-size: 2.5rem;
+            margin: auto;
+            color: #fff;
+        }
+    }
+
+}
+
+.msgError .circle {
+    background: red;
+    box-shadow: 0 0 1rem 0 red;
+
+}

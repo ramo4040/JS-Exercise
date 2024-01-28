@@ -40,10 +40,8 @@ generateBtn.addEventListener('click', () => {
 
 
         for (let i = 1; i <= inputSlider.value; i++) {
-            for (let j = 0; j < 1; j++) {
                 let rndm = Math.floor(Math.random() * arr.length)
                 result += arr[rndm]();
-            }
         }
 
         passwordDisplay.value = result;

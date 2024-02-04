@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+        <main>
+                <div class="background__screen"></div>
+
+                <section class="background__details">
+
+                        <div class="background__picker">
+                                <div class="left">
+                                        <div class="circle c1">
+                                                <input type="color" value="#48B2FE" class="hexcolor" data-c1>
+                                        </div>
+                                        <input type="text" class="inputHex" placeholder=" #48B2FE" data-c1>
+                                        <label for="hex1">HEX</label>
+                                </div>
+                                <div class="right">
+                                        <label for="hex2">HEX</label>
+                                        <input type="text" class="inputHex" placeholder="#4EE4E3" data-c2>
+                                        <div class="circle c2">
+                                                <input type="color" value="#4EE4E3" class="hexcolor" data-c2>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class='rgb__angle'>
+                                <div class="rgb__left">
+                                        <small>RGB COLOR CODE</small>
+                                        <div class="group__inpt" data-c1>
+                                                <label for="R"><input id="R" type="number" value="72" min="0" max="255">
+                                                        R</label>
+                                                <label for="G"><input id="G" type="number" value="178" min="0"
+                                                                max="255"> G</label>
+                                                <label for="B"><input id="B" type="number" value="254" min="0"
+                                                                max="255"> B</label>
+                                                <label for="A"><input id="A" type="number" value="100" min="0"
+                                                                max="100"> R</label>
+                                        </div>
+                                </div>
+                                <div class="angle">
+                                        <small>Angle</small>
+                                        <div class="angle__group">
+                                                <div class="angel__circle"></div>
+                                                <input type="range" min="0" max="360" value="45" step="1">
+                                                <span data-rangeValue>45</span>
+                                        </div>
+                                </div>
+                                <div class="rgb__right">
+                                        <small>RGB COLOR CODE</small>
+                                        <div class="group__inpt" data-c2>
+                                                <label for="R"><input id="R" type="number" value="78" min="0" max="255">
+                                                        R</label>
+                                                <label for="G"><input id="G" type="number" value="228" min="0"
+                                                                max="255"> G</label>
+                                                <label for="B"><input id="B" type="number" value="227" min="0"
+                                                                max="255"> B</label>
+                                                <label for="A"><input id="A" type="number" value="100" min="0"
+                                                                max="100"> R</label>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="code">
+                                <button class="codeCss"><i class="bi bi-copy"></i> Get CSS</button>
+                                <button class="svg"><i class="bi bi-download "></i> SVG</button>
+                                <button class="png"><i class="bi bi-download"></i> PNG</button>
+                        </div>
+
+                </section>
+        </main>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

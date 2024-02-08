@@ -17,4 +17,5 @@ Happy coding! If you have any questions or need assistance, feel free to open an
 
 <img src='add projects/1.png' width='410'> <img src='password/1.png' width='410'>
 <img src='Highlight Searched/1.png' width='410'> <img src='Gradient generator/1.png' width='410'>
+<img src='Stars rating/1.png' width='410'>
 

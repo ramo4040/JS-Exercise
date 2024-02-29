@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+        <main>
+                <form action="/" name="signUp">
+                        <div class="__header">
+                                <h1>Sign up</h1>
+                                <p>Already Have An Account? <a href="#">Log in</a></p>
+                        </div>
+                        <div class="__group-input">
+                                <div>
+                                        <label for="fname">First name*</label>
+                                        <input type="text" id="fname" name="fname" placeholder="Jhon">
+                                        <div class="input-icon">
+                                                <i class="bi bi-check hide"></i>
+                                                <i class="bi bi-x hide"></i>
+                                        </div>
+                                </div>
+                                <div>
+                                        <label for="lname">Last name*</label>
+                                        <input type="text" id="lname" name="lname" placeholder="Doe">
+                                        <div class="input-icon">
+                                                <i class="bi bi-check hide"></i>
+                                                <i class="bi bi-x hide"></i>
+                                        </div>
+                                </div>
+                                <div>
+                                        <label for="email">Email addresse*</label>
+                                        <input type="email" id="email" name="email" placeholder="Jhon.Doe@gmail.com">
+                                        <div class="input-icon">
+                                                <i class="bi bi-check hide"></i>
+                                                <i class="bi bi-x hide"></i>
+                                        </div>
+                                </div>
+                                <div>
+                                        <label for="email">Password (8+ characters)*</label>
+                                        <input type="password" id="password" name="password" placeholder="**************">
+                                        <div class="input-icon">
+                                                
+                                                <i class="bi bi-eye"></i>
+                                                <i class="bi bi-check hide"></i>
+                                                <i class="bi bi-x hide"></i>
+                                                
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="__footer">
+                                <div class="__latest-info">
+                                        <h3>Want to stay up to date on the latest?</h3>
+                                        <small>Join our email list and be the first to know about special
+                                                offers.</small>
+                                        <div class="__radio">
+                                                <div>
+                                                        <div class="__Yes">
+                                                                <input type="radio" name="latest" id="yes" checked>
+                                                        </div>
+                                                        <label for="yes">Yes</label>
+                                                </div>
+
+                                                <div>
+                                                        <div class="__No">
+                                                                <input type="radio" name="latest" id="no">
+                                                        </div>
+                                                        <label for="no">No</label>
+                                                </div>
+                                        </div>
+                                        <button>CREATE AN ACCOUNT</button>
+                                </div>
+                        </div>
+                </form>
+        </main>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

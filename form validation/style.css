@@ -1,0 +1,146 @@
+@import url(var.css);
+
+
+body {
+    height: 100vh;
+    background: #faf6f3;
+    background-size: cover;
+    padding: 1.5rem;
+    display: flex;
+    font-family: system-ui;
+}
+
+main {
+    margin: auto;
+    width: 28rem;
+    height: 40rem;
+    background: hsl(0, 0%, 100%);
+    border-radius: 2rem;
+    border: 1px solid #fff;
+    padding: 2.4rem;
+    border: 1px solid var(--gray-3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.__header {
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+
+    a {
+        color: #cf9468;
+        text-decoration: underline;
+    }
+}
+
+.__group-input {
+    --idle: var(--gray-3);
+    --success: var(--green-4);
+    --error: var(--red-6);
+
+    display: grid;
+    gap: 1rem;
+
+    >div {
+        display: grid;
+        border: 1px solid;
+        border-color: var(--idle);
+        border-radius: .6rem;
+        padding: .3rem 1rem;
+        position: relative;
+
+        label {
+            font-size: 13px;
+        }
+
+        input {
+            border: 0;
+            outline: 0;
+            background: none;
+        }
+
+        .password-show {
+            display: flex;
+        }
+
+        .input-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: var(--fs-3);
+            cursor: pointer;
+            color: var(--idle);
+
+            .hide {
+                display: none;
+            }
+            .bi-check{
+                color: var(--success);
+            }
+            .bi-x{
+                color: var(--error);
+            }
+        }
+    }
+}
+
+.__footer{
+    height: 100%;
+}
+
+.__latest-info {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    height: 100%;
+
+    
+
+    .__radio {
+        display: flex;
+        gap: 2rem;
+
+        >div{
+            display: flex;
+            gap: .5rem;
+        }
+
+        :is(.__Yes, .__No) {
+            position: relative;
+            width: 1.2rem;
+            aspect-ratio: 1;
+            border: 2px solid var(--gray-4);
+            border-radius: var(--radius-round);
+
+            input {
+                appearance: none;
+                width: 1.2rem;
+                aspect-ratio: 1;
+                position: absolute;
+                cursor: pointer;
+            }
+
+            &:has(input:checked){
+                border: 5px solid #ffbe5e;
+            }
+        }
+    }
+    
+    button{
+        background: #ffbe5e;
+        border-radius: var(--radius-round);
+        padding: .7rem 1rem;
+        text-align: center;
+        color: white;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-top: auto;
+    }
+}

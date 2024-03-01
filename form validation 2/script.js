@@ -59,6 +59,8 @@ const check = (name, value) => {
 
 const handleError = (input, msg) => {
   input.nextElementSibling.innerText = msg;
+  input.classList.toggle('error', msg); 
+  input.classList.toggle('success', !msg); 
 };
 
 form.onsubmit = () => validate();

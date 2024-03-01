@@ -1,0 +1,159 @@
+@import url(var.css);
+
+
+body {
+    height: 100vh;
+    font-family: system-ui;
+    display: flex;
+    background: #000;
+
+}
+
+main {
+    margin: auto;
+    min-height: 55rem;
+    width: 75rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.__Background {
+    background-image: url(4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .__blur {
+        height: 100%;
+        background: #00000067;
+        backdrop-filter: blur(3px);
+    }
+}
+
+.__signUp {
+    border-radius: 2rem 0 0 2rem;
+    background: #fff;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .__header {
+        display: grid;
+        gap: 1rem;
+
+        h1 {
+            font-size: var(--fs-7);
+        }
+
+        p {
+            color: var(--gray-8);
+        }
+    }
+
+    .__groupInput {
+        --gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+
+
+        >div {
+            flex-basis: calc(50% - (var(--gap) / 2));
+
+            input,
+            select {
+                width: 100%;
+                border: 0;
+                outline: 0;
+                border: 1px solid var(--gray-6);
+                border-radius: .4rem;
+                padding: .7rem 1rem;
+                background: #fcfcfc;
+            }
+
+            span {
+                font-size: 14px;
+                display: block;
+                height: fit-content;
+                color: red;
+            }
+        }
+
+        .--agree {
+            flex-basis: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            input {
+                width: fit-content;
+                width: 1.2rem;
+                aspect-ratio: 1;
+                border-radius: 4px;
+                accent-color: #000;
+            }
+        }
+
+    }
+
+    button {
+        border: 1px solid #000;
+        width: 100%;
+        background: none;
+        text-align: center;
+        padding: .6rem;
+        border-radius: .5rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        font-size: var(--fs-2);
+        font-weight: var(--font-weight-5);
+        transition: .25s;
+
+        &:hover {
+            background: #000;
+            color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+    }
+
+    .__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+
+        #or {
+            width: 50%;
+            text-align: center;
+            border-bottom: 1px solid #000;
+            line-height: 0.1rem;
+
+            span {
+                background: #fff;
+                padding: 0 2rem;
+            }
+        }
+
+        .__button {
+            display: flex;
+            gap: 2rem;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: .8rem 2rem;
+                border: 1px solid var(--gray-6);
+                border-radius: .5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+        <main>
+               <div class="__inputGroup">
+                        <header>
+                                <h2>Sign up with us today</h2>
+                                <p id="infoSignUp">Enter your UserName and choose a Email to setup your account</p>
+                        </header>
+                <form action="/">
+                        <section>
+                                <div class="__inputScroll">
+                                        <div class="--scroll" data-page='0'>
+                                                <div>
+                                                        <input type="text" name="fname" placeholder="First Name" pattern="^[a-zA-Z]{3,24}$" required>
+                                                        <input type="text" name="lname" placeholder="Last Name" pattern="^[a-zA-Z]{3,24}$" required>
+                                                </div>
+                                                <div>
+                                                        <input type="email" name="email" placeholder="Email" pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+" required>
+                                                        <input type="password" name="password" placeholder="Password" pattern=".{8,}" required> 
+                                                </div>
+                                                <div class="agree">
+                                                        <input type="checkbox" name="agree" id="agree">
+                                                        <label for="agree">
+                                                                I've read and agree with <b>Terms of Service</b> and our
+                                                                <b>Privacy Policy</b>
+                                                        </label>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="__submit">
+                                        <button class="prev hidden" type="button"><i class="bi bi-chevron-left"></i> previous</button>
+                                        <button class="next" type="button">next <i class="bi bi-chevron-right"></i></button>
+                                        <button class="submit hidden" type="submit">Sign up</button>
+                                </div>
+                        </section>
+                </form>
+               </div>
+               <div class="__quotes">
+                        <p>"Stratis UI Kit has allowed us to rapidly prototype build ready products within minutes, its really helped us expand out capabilities quickly"</p>
+                        <div class="__profile">
+                                <div class="__img"></div>
+                                <h4>Alison Bothman</h4>
+                                <p>Product Designer , Google</p>
+                        </div>
+                </div>
+        </main>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

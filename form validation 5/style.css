@@ -1,0 +1,181 @@
+@import url(var.css);
+
+:root {
+    --main-color: #131314;
+    --secondary-color: #666667;
+    --secondary-color2: #1e1f20;
+    --secondary-hover: #6666674a;
+}
+
+body {
+    height: 100vh;
+    font-family: system-ui;
+    color: #fff;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.__information {
+    background: #000;
+    display: grid;
+    padding: 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+
+    .__mesh1,
+    .__mesh2 {
+        background: var(--gradient-11);
+        border-radius: 50%;
+        filter: blur(8rem);
+    }
+
+    .__mesh1 {
+        position: absolute;
+        bottom: -27%;
+        left: -46%;
+        width: 44rem;
+        aspect-ratio: 1;
+    }
+
+    .__mesh2 {
+        position: absolute;
+        bottom: -65%;
+        right: 0%;
+        width: 50rem;
+        aspect-ratio: 1;
+    }
+
+    .__logo {
+        width: 3rem;
+        aspect-ratio: 1;
+        background: #fff;
+        border-radius: 50%;
+    }
+
+    .__content {
+        z-index: 1;
+        align-self: end;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 400;
+            min-width: 60%;
+            text-wrap: balance;
+            background: var(--gradient-15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .__features {
+        display: flex;
+        gap: 1rem;
+
+        >div {
+            flex: 1;
+            display: grid;
+            gap: .4rem;
+
+            span {
+                font-size: 1.1rem;
+            }
+
+            p,
+            i {
+                color: var(--gray-5);
+            }
+        }
+    }
+}
+
+.__signUp {
+    color: #000;
+    width: 45%;
+    justify-self: center;
+    align-self: center;
+
+    header {
+        display: grid;
+        gap: 1rem;
+
+        .__gooGit {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            a {
+                flex: 1;
+                display: grid;
+                place-content: center;
+                border: 1px solid var(--gray-5);
+                padding-block: .3rem;
+                border-radius: .8rem;
+                cursor: pointer;
+            }
+        }
+
+        p:last-child {
+            text-align: center;
+        }
+    }
+
+    .__group-input {
+        display: grid;
+        gap: 1.5rem;
+
+        form {
+            display: grid;
+            gap: 1rem;
+
+            >div {
+                display: grid;
+                gap: 0.2rem;
+
+                label {
+                    color: var(--gray-6);
+                }
+
+                input {
+                    border: 0;
+                    outline: 0;
+                    border: 1px solid var(--gray-5);
+                    padding: .4rem 1rem;
+                    border-radius: .4rem;
+                }
+
+                span {
+                    color: var(--red-5);
+                }
+
+            }
+        }
+
+        button {
+            padding: .5rem;
+            background: #5f36e5;
+            border: 0;
+            border-radius: .4rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+
+            a {
+                color: #5f36e5;
+                font-weight: 600;
+            }
+        }
+    }
+}
